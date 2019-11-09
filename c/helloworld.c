@@ -1,5 +1,10 @@
 #include "stdio.h"
 
+struct student{
+    int num;
+    char name[20];
+};
+
 int main()
 {
     int *p1 ,(*p2)[10];

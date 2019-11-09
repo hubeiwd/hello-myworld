@@ -13,18 +13,9 @@ T min(T a,T b,T c)
 
 int main()
 {
-    int *p1 ,(*p2)[10];
-    int aa[10] = {0};
-    int *bb[10] = {0};
-    char *str = "abc";
-    //*str = 'd';
-    p1 = aa;
-    p2 = &aa;
     int a = 4,b = 2,c = 3;
-    cout << min(a, b, c) << endl;
-    cout << *p1 << endl;
-    cout << p2[0] << endl;
-    cout << bb + 1 << endl;
-    cout << str[1] << endl;
+    int (*ptr)(int x, int y, int z);
+    ptr = &min;
+    cout << (*ptr)(a, b, c) << endl;
     return 0;
 }
