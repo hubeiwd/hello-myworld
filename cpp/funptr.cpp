@@ -11,6 +11,11 @@ T min(T a,T b,T c)
     return a;
 }
 
+struct student{
+    int num;
+    char name[20];
+};
+
 int main()
 {
     int a = 4,b = 2,c = 3;

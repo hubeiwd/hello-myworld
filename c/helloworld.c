@@ -11,10 +11,12 @@ int main()
     int aa[10] = {0};
     int *bb[10] = {0};
     char *str = "abc";
-    str[0] = 'd';
+    // str[0] = 'd';
     p1 = aa;
     p2 = &aa;
     int a = 4,b = 2,c = 3;
+    struct student wangding;
+    wangding.num = 0;
     //cout << min(a, b, c) << endl;
     //cout << *p1 << endl;
     //cout << p2[0] << endl;
