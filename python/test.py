@@ -1,8 +1,12 @@
-import os
-path = os.listdir(os.getcwd())
-for p in path:
-    if os.path.isdir(p):
-        print(p)
-with open("python/test.txt", 'w') as file_object:
-    file_object.write('I love programming.\n')
-    file_object.write('skrskr.\n')
+import unittest
+
+def get_formatted_name(first, last):
+    full_name = first + ' ' +last
+    return full_name.title()
+
+class Namestestcase(unittest.TestCase):
+    def test_first_last_name(self):
+        formatted_name = get_formatted_name('janis', 'joplin')
+        self.assertEqual(formatted_name, 'Janis Joplin')
+
+unittest.main()
