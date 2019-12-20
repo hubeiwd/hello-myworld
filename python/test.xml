@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<books>
+  <book>
+    <name>Python黑帽子</name>
+    <date>2015</date>
+    <price>37￥</price>
+    <description>用python写一些程序</description>
+  </book>
+  <book>
+    <name>Web安全深度剖析</name>
+    <date>2014</date>
+    <price>39￥</price>
+    <description>讲述web渗透的基础知识</description>
+  </book>
+  <book>
+    <name>白帽子讲web安全</name>
+    <date>2013</date>
+    <price>44￥</price>
+    <description>道哥力作</description>
+  </book>
+</books>

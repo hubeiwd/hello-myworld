@@ -1,13 +1,25 @@
-import socket
-s = socket.socket()
+#!/usr/bin/env python3
+from socket import *
+from time import ctime
 
-host  = socket.gethostname()
-port = 2356
-s.bind((host, port))
-s.listen(10)
+host = ''
+port = 10086
+buffsize = 1024
+addr = (host, port)
+
+tcpsoc = socket(AF_INET, SOCK_STREAM)
+tcpsoc.bind(addr)
+tcpsoc.listen()
 
 while True:
-    c,addr = s.accept()
-    print('get connection from', addr)
-    c.send('thank you for connecting')
-    c.close()
+    print("waiting for connection...")
+    tcpcli,addrcli = tcpsoc.accept()
+    print("...connected from:%s" % addrcli)
+
+    while True:
+        data = tcpcli.recv(buffsize)
+        if not data:
+            break
+        tcpcli.send(" [%s] %s" %(ctime(), data))
+    tcpcli.close()
+tcpsoc.close()
